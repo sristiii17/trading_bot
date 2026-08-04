@@ -1,0 +1,16 @@
+
+**** ERROR file opened at 20240728 080116 India Standard Time, SAP-REL 740,0,86 RFC-VER 3  MT-SL
+T:3536 Error in program 'C:\Program Files (x86)\SAP\Front': ======> CPIC-CALL: 'CMRCV : rc=20
+
+LOCATION    CPIC (TCP/IP) on local host Sakshi
+ERROR       illegal parameter value ( function=SAP_CMTIMEOUT2 /
+            parameter=conversation_ID / value=58919071 )
+TIME        Sun Jul 28 08:01:16 2024
+RELEASE     740
+COMPONENT   CPIC (TCP/IP)
+VERSION     3
+RC          769
+MODULE      D:/depot/bas/740_REL/src/krn/si/cpic/r3cpic.c
+LINE        10858
+COUNTER     7
+

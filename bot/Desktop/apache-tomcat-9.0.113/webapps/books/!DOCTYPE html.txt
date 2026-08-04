@@ -1,0 +1,15 @@
+<!DOCTYPE html > 
+<html >
+<head> 
+<title> MY INTRODUCTION </title>
+</head> 
+<body> 
+ <h1> Hello , this is my introduction page </h1> <br> 
+<b> Name : </b> <i> Sristi .M. Sharma </i> 
+<br> 
+<strong> Age : </strong><i> 19 </i> <br>
+<h2>  studying :</h2><i> computer science </i> <br> 
+<em> I've build an Internship Tracker using tech stack as : <u> Python , HTML , CSS , Flask </u> </em> <br> 
+<h3> I'm a student trying to build my career , some skills that I've are : <b> C , C++  python , java , flask , MySQL , Docker etc <b>  
+</body> 
+ </html> 
