@@ -1,98 +1,228 @@
-# Binance Futures Testnet Trading Bot
+#  Trading Bot Dashboard
 
-A simplified trading bot built using Python for Binance Futures Testnet.
+A full-stack trading dashboard built with **React**, **Flask**, and **Python** that provides a modern web interface for executing mock Binance Futures Market and Limit orders.
 
-## Features
-
-- MARKET orders
-- LIMIT orders
-- BUY and SELL support
-- CLI-based input
-- Input validation
-- Logging system
-- Exception handling
-- Structured modular architecture
+The project transforms a command-line trading bot into an interactive dashboard by integrating a React frontend with a Flask REST API.
 
 ---
 
-## Project Structure
+##  Features
 
+-  Modern trading dashboard
+-  Place Market and Limit orders
+-  React frontend with responsive UI
+-  Flask REST API integration
+-  Modular Python backend
+-  Logging support
+-  Dark mode trading interface
+-  Docker support
+
+---
+
+##  Tech Stack
+
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- Lucide React
+
+### Backend
+- Python
+- Flask
+- Flask-CORS
+
+### Tools
+- Git
+- GitHub
+- Docker
+
+---
+
+##  Project Structure
+
+```text
 trading_bot/
-
 │
-
 ├── bot/
 │   ├── client.py
+│   ├── logging_config.py
 │   ├── orders.py
-│   ├── validators.py
-│   └── logging_config.py
+│   └── validators.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   └── Dockerfile
 │
 ├── logs/
+├── tests/
+├── app.py
 ├── cli.py
 ├── requirements.txt
-├── README.md
-└── .env
+└── README.md
+```
 
 ---
 
-## Setup
+## Installation
 
-### Create Virtual Environment
+### Clone the repository
+
+```bash
+git clone https://github.com/yourusername/trading_bot.git
+cd trading_bot
+```
+
+---
+
+### Backend Setup
+
+Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
+Activate it
 
-Windows:
+Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Install Dependencies
+Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Run MARKET Order
+Run Flask
 
 ```bash
-python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+python app.py
+```
+
+Backend runs at
+
+```
+http://127.0.0.1:5000
 ```
 
 ---
 
-## Run LIMIT Order
+### Frontend Setup
 
 ```bash
-python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price 120000
+cd frontend
+```
+
+Install packages
+
+```bash
+npm install
+```
+
+Run
+
+```bash
+npm run dev
+```
+
+Frontend runs at
+
+```
+http://localhost:5173
 ```
 
 ---
 
-## Logging
+## API
 
-Logs are stored in:
+### POST /trade
 
-```text
-logs/trading_bot.log
+Request
+
+```json
+{
+  "symbol": "BTCUSDT",
+  "side": "BUY",
+  "orderType": "MARKET",
+  "quantity": 0.01
+}
+```
+
+Response
+
+```json
+{
+  "success": true,
+  "message": "Trade Executed Successfully"
+}
+```
+
+##  Docker
+
+Build frontend
+
+```bash
+docker build -t trading-dashboard ./frontend
+```
+
+Run frontend
+
+```bash
+docker run -p 5173:5173 trading-dashboard
 ```
 
 ---
 
-## Assumptions
+##  Learning Outcomes
 
-- Binance Futures Testnet endpoint is used
-- Mock responses are currently implemented for order execution
-- Structure is designed for easy integration with live Binance APIs
+Through this project I learned:
+
+- Building reusable React components
+- Creating REST APIs with Flask
+- Connecting React and Python using Axios
+- Organizing a modular backend architecture
+- Handling HTTP requests and JSON responses
+- Managing project structure for scalability
+- Dockerizing applications
 
 ---
 
-## Note
+##  Future Improvements
 
-Due to Binance regional/API restrictions during development, mock responses were implemented while preserving modular production-ready architecture and Binance Futures Testnet compatibility.
+- Live Binance API integration
+- Real-time price updates
+- Candlestick charts
+- User authentication
+- Portfolio tracking
+- Trade history persistence
+- Docker Compose deployment
+- Unit and integration tests
+
+---
+
+## Author
+
+**Sristi Sharma**
+
+Computer Engineering Student
+
+GitHub: https://github.com/sristiii17
+
+LinkedIn: https://linkedin.com/in/sristi-sharma-506862325/
